@@ -1,0 +1,162 @@
+[
+  {
+    "id": "home",
+    "translationKey": "home",
+    "locale": "en-US",
+    "routeKind": "home",
+    "url": "/",
+    "alternates": {
+      "en-US": "/"
+    }
+  },
+  {
+    "id": "about",
+    "translationKey": "about",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/about",
+    "alternates": {
+      "en-US": "/about"
+    }
+  },
+  {
+    "id": "characters-abilities",
+    "translationKey": "characters-abilities",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/characters",
+    "alternates": {
+      "en-US": "/characters"
+    }
+  },
+  {
+    "id": "controls-movement",
+    "translationKey": "controls-movement",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/controls",
+    "alternates": {
+      "en-US": "/controls"
+    }
+  },
+  {
+    "id": "crossplay-online",
+    "translationKey": "crossplay-online",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/crossplay",
+    "alternates": {
+      "en-US": "/crossplay"
+    }
+  },
+  {
+    "id": "demo-playtest",
+    "translationKey": "demo-playtest",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/demo",
+    "alternates": {
+      "en-US": "/demo"
+    }
+  },
+  {
+    "id": "faq",
+    "translationKey": "faq",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/faq",
+    "alternates": {
+      "en-US": "/faq"
+    }
+  },
+  {
+    "id": "guides",
+    "translationKey": "guides",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/guides",
+    "alternates": {
+      "en-US": "/guides"
+    }
+  },
+  {
+    "id": "items-powerups",
+    "translationKey": "items-powerups",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/items",
+    "alternates": {
+      "en-US": "/items"
+    }
+  },
+  {
+    "id": "price-editions",
+    "translationKey": "price-editions",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/price",
+    "alternates": {
+      "en-US": "/price"
+    }
+  },
+  {
+    "id": "release-platforms",
+    "translationKey": "release-platforms",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/release",
+    "alternates": {
+      "en-US": "/release"
+    }
+  },
+  {
+    "id": "reviews-press",
+    "translationKey": "reviews-press",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/reviews",
+    "alternates": {
+      "en-US": "/reviews"
+    }
+  },
+  {
+    "id": "system-requirements",
+    "translationKey": "system-requirements",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/system-requirements",
+    "alternates": {
+      "en-US": "/system-requirements"
+    }
+  },
+  {
+    "id": "tracks-game-modes",
+    "translationKey": "tracks-game-modes",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/tracks-modes",
+    "alternates": {
+      "en-US": "/tracks-modes"
+    }
+  },
+  {
+    "id": "speedrunners-2-vs-1",
+    "translationKey": "speedrunners-2-vs-1",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/vs-speedrunners-1",
+    "alternates": {
+      "en-US": "/vs-speedrunners-1"
+    }
+  },
+  {
+    "id": "wiki",
+    "translationKey": "wiki",
+    "locale": "en-US",
+    "routeKind": "fixed",
+    "url": "/wiki",
+    "alternates": {
+      "en-US": "/wiki"
+    }
+  }
+]
