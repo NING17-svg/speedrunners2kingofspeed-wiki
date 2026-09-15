@@ -10,6 +10,7 @@ export const primaryNavigation: LocalizedNavigationItem[] = [
   { href: "/system-requirements", labels: { "en-US": "System requirements" } },
   { href: "/crossplay", labels: { "en-US": "Crossplay" } },
   { href: "/characters", labels: { "en-US": "Characters" } },
+  { href: "/story-campaign", labels: { "en-US": "Story campaign" } },
   { href: "/tracks-modes", labels: { "en-US": "Tracks & modes" } },
   { href: "/controls", labels: { "en-US": "Controls" } },
   { href: "/items", labels: { "en-US": "Items" } },

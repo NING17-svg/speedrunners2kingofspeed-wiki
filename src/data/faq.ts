@@ -3,9 +3,9 @@ import type { FAQItem } from "@/types/content";
 export const faqItems: FAQItem[] = [
   {
     id: "sr2-release-date",
-    question: "When did SpeedRunners 2: King of Speed launch on PC?",
+    question: "When did SpeedRunners 2: King of Speed launch?",
     answer:
-      "SpeedRunners 2: King of Speed released on Windows PC via Steam on September 3, 2026, with AppID 3183760. The developer is Fair Play Labs and the publisher is tinyBuild.",
+      "SpeedRunners 2: King of Speed released simultaneously on September 3, 2026 across Steam (Windows) under AppID 3183760, PlayStation 5, Xbox Series X|S, and Nintendo Switch. The developer is Fair Play Labs and the publisher is tinyBuild.",
     pageIds: ["home", "release-platforms", "wiki", "faq"],
     category: "release",
     schemaEligible: true,
@@ -15,8 +15,18 @@ export const faqItems: FAQItem[] = [
     id: "sr2-platforms",
     question: "Which platforms is SpeedRunners 2: King of Speed available on right now?",
     answer:
-      "The Steam listing on launch day is Windows-only. Console or mobile ports beyond the listed Windows Steam release are Not announced as of 2026-09-08.",
+      "SpeedRunners 2: King of Speed launched simultaneously on Steam (Windows), PlayStation 5, Xbox Series X|S, and Nintendo Switch on September 3, 2026, with full cross-play across all four platforms from day one. Per-console editions are listed on PlayStation Store, Microsoft Store, and Nintendo eShop.",
     pageIds: ["home", "release-platforms", "wiki", "faq"],
+    category: "platform",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "sr2-game-pass",
+    question: "Is SpeedRunners 2 on Xbox Game Pass?",
+    answer:
+      "Yes. SpeedRunners 2: King of Speed is included on Xbox Game Pass from day one for both console and PC subscribers, per launch-day coverage (loovaplay). Game Pass subscribers can play the Xbox Series X|S or PC version without an additional launch purchase.",
+    pageIds: ["release-platforms", "price-editions", "wiki", "faq"],
     category: "platform",
     schemaEligible: true,
     sourceStatus: "official",
@@ -45,8 +55,8 @@ export const faqItems: FAQItem[] = [
     id: "sr2-crossplay",
     question: "Does SpeedRunners 2 support crossplay?",
     answer:
-      "Cross-platform play between PC and consoles is Not announced as of 2026-09-08. The Steam store page does not tag an explicit cross-platform label for AppID 3183760.",
-    pageIds: ["crossplay-online", "wiki", "faq"],
+      "Yes. SpeedRunners 2: King of Speed supports full cross-play across all four launch platforms from day one: Steam (Windows), PlayStation 5, Xbox Series X|S, and Nintendo Switch. Launch-day coverage (loovaplay) explicitly states \"Full cross-play across all four platforms from day one\".",
+    pageIds: ["home", "release-platforms", "crossplay-online", "wiki", "faq"],
     category: "site",
     schemaEligible: true,
     sourceStatus: "official",
@@ -95,9 +105,39 @@ export const faqItems: FAQItem[] = [
     id: "sr2-playground",
     question: "What are Playground modes in SpeedRunners 2?",
     answer:
-      "Playground is a new experimental rule-bending mode family on the launch build. Exact Playground mode rule sets are Not announced as of 2026-09-08.",
+      "Playground is a new experimental rule-bending mode family on the launch build. Exact Playground mode rule sets are Not announced as of 2026-09-16.",
     pageIds: ["tracks-game-modes", "demo-playtest", "faq"],
     category: "site",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "sr2-story-characters",
+    question: "Who are the named SpeedRunners 2 Story campaign characters?",
+    answer:
+      "The Story campaign set in New Rush City stars Moonraker with hero crew Falcon, Dart, Hothead, and Cosmonaut Comrade, racing against the villain crew anchored by Unic and SpeedRunner. The names come from the Speed Blog: Story Campaign, Boss Fights, and Other Teasers on changelog.gg.",
+    pageIds: ["characters-abilities", "story-campaign", "wiki", "guides", "faq"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "sr2-mission-types",
+    question: "What mission types are in the SpeedRunners 2 Story campaign?",
+    answer:
+      "The Story campaign runs across five mission types: Classic races, Lap Races, Skyfall Rush, Boss Battles, and Escape Missions. Boss Battles use the Five Movers mechanic, a Psychonauts-inspired movement-state design.",
+    pageIds: ["tracks-game-modes", "story-campaign", "wiki", "guides", "faq"],
+    category: "gameplay",
+    schemaEligible: true,
+    sourceStatus: "official",
+  },
+  {
+    id: "sr2-boss-battle",
+    question: "How do Boss Battles work in SpeedRunners 2?",
+    answer:
+      "Boss Battles are a Story campaign mission type where bosses shift through five movement states (the Five Movers mechanic), a Psychonauts-inspired design pattern. The Speed Blog and loovaplay launch coverage both call out boss battles as a marquee single-player addition addressing the original's missing solo content.",
+    pageIds: ["story-campaign", "guides", "faq"],
+    category: "gameplay",
     schemaEligible: true,
     sourceStatus: "official",
   },
@@ -135,7 +175,7 @@ export const faqItems: FAQItem[] = [
     id: "sr2-price",
     question: "How much does SpeedRunners 2 cost on Steam?",
     answer:
-      "The introductory base price is $9.99 with a 10% launch discount that brings the launch total to $8.99 through September 17, 2026.",
+      "The Steam introductory base price is $9.99 with a 10% launch discount that brings the launch total to $8.99 through September 17, 2026. Separate per-console editions are available on PS5, Xbox Series X|S, and Nintendo Switch, with day-one Xbox Game Pass for console and PC subscribers.",
     pageIds: ["home", "price-editions", "wiki", "faq"],
     category: "release",
     schemaEligible: true,

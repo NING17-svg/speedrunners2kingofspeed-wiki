@@ -6,6 +6,22 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
+### 2026-09-16 - Multi-platform launch and console availability update
+
+- Task: Update release, price, and crossplay pages to reflect the simultaneous 2026-09-03 launch on Steam (Windows), PlayStation 5, Xbox Series X|S, and Nintendo Switch with day-one Xbox Game Pass and full cross-play across all four platforms.
+- Files changed: `src/data/pages/home.ts`, `src/data/pages/fixed-pages.ts` (`release-platforms`, `crossplay-online`, `price-editions`), `src/data/faq.ts`, `src/data/navigation.ts`, `CONTENT_INDEX.md`.
+- URLs affected: `/`, `/release`, `/crossplay`, `/price`.
+- SEO/GEO changed: Home hero and quick answer updated for multi-platform launch; release, crossplay, and price pages carry the Game Pass callout and a storefront-label-gap callout on crossplay; FAQ entries updated for crossplay and Game Pass; primary navigation unchanged (existing routes only).
+- Verification: `npm run verify` must succeed before pushing the target commit.
+
+### 2026-09-16 - Story campaign characters, mission types, and bosses update
+
+- Task: Add the named Story campaign heroes and villains (Moonraker, Falcon, Dart, Hothead, Cosmonaut Comrade, Unic, SpeedRunner), the five mission types (Classic, Lap Race, Skyfall Rush, Boss Battle, Escape Missions), and the Five Movers Boss Battle mechanic.
+- Files changed: `src/data/pages/home.ts`, `src/data/pages/fixed-pages.ts` (`characters-abilities`, `tracks-game-modes`, new `story-campaign`, `wiki`, `faq`, `guides`), `src/data/faq.ts`, `src/data/navigation.ts`, `CONTENT_INDEX.md`.
+- URLs affected: `/`, `/characters`, `/tracks-modes`, new `/story-campaign`, `/wiki`, `/faq`, `/guides`.
+- SEO/GEO changed: New `/story-campaign` page lists the cast, mission types, and Boss Battle mechanic; `/characters` now carries a Story campaign roster table; `/tracks-modes` links out to the Story campaign page; primary navigation gains a Story campaign entry; FAQ schema covers Story characters, mission types, and Boss Battle.
+- Verification: `npm run verify` must succeed before pushing the target commit.
+
 ### 2026-09-08 - Adsterra integration (speedrunners2kingofspeed-wiki launch)
 
 - Task: Replace empty placeholder values in `src/data/ads.ts` with real Adsterra Native Banner, Banner 728x90 / 468x60 / 320x50 / 160x600, and Smartlink codes produced by `adsterra-integrator`.
