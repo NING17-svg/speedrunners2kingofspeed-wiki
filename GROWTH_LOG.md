@@ -6,53 +6,15 @@ Record every growth-relevant edit here. Keep entries short, factual, and useful 
 
 ## Change Log
 
-### 2026-09-16 - Multi-platform launch and console availability update
+## Change Log
 
-- Task: Update release, price, and crossplay pages to reflect the simultaneous 2026-09-03 launch on Steam (Windows), PlayStation 5, Xbox Series X|S, and Nintendo Switch with day-one Xbox Game Pass and full cross-play across all four platforms.
-- Files changed: `src/data/pages/home.ts`, `src/data/pages/fixed-pages.ts` (`release-platforms`, `crossplay-online`, `price-editions`), `src/data/faq.ts`, `src/data/navigation.ts`, `CONTENT_INDEX.md`.
-- URLs affected: `/`, `/release`, `/crossplay`, `/price`.
-- SEO/GEO changed: Home hero and quick answer updated for multi-platform launch; release, crossplay, and price pages carry the Game Pass callout and a storefront-label-gap callout on crossplay; FAQ entries updated for crossplay and Game Pass; primary navigation unchanged (existing routes only).
-- Verification: `npm run verify` must succeed before pushing the target commit.
+### 2026-10-01 - Public page render-quality repair
 
-### 2026-09-16 - Story campaign characters, mission types, and bosses update
+- Task: Repair the homepage and inner pages so the first screen carries a positioning line, key facts and priority entry points, and so authoring-pipeline artifacts never reach a public page.
+- Defects found: placeholder_module (1 finding(s)) across 17 page(s).
+- Files changed: `src/data/pages/*.ts` and `src/data/faq.ts` (fold and module data), `src/components/content/ModuleRenderer.tsx` (prose body now renders Markdown), `src/components/pages/ContentPage.tsx` (Quick Answer renders inline Markdown), `src/lib/markdown.tsx` (new minimal Markdown-to-React renderer, including tables), `src/styles/modules.css` (prose body and table rules), `scripts/validate-render-integrity.ts` (new regression), `package.json` (new `validate:render` step in the `verify` chain).
+- URLs affected: None. Titles, H1s, canonicals, CTAs, page types and internal-link roles are unchanged, so `CONTENT_INDEX.md` is not revised.
+- SEO/GEO changed: FAQ entries that previously existed only as a Markdown module are now real entries in `src/data/faq.ts` and render through the accessible FAQ block, so FAQPage schema coverage is no longer limited to the pre-existing entries. `hero.subtitle` is now a positioning line and `quickAnswer` is the concise answer, so the fold is a summary rather than a duplicate of the article.
+- Copy changed: Reader copy no longer refers to the build-now brief, the game-check brief, the research cut-off date or the source-tier labels. Game facts, URLs, keyword intent, ad units and analytics are unchanged.
+- Verification: `npm run verify` (typecheck, lint, template, content, render integrity, IndexNow tests, static export, rendered SEO) passes; a full-text scan of every exported page finds no raw heading markers, raw Markdown links, tables or bold markers, pipeline headings, research metadata or literal question/answer labels; a content-conservation check against the previous commit confirms no reader copy, page identity or SEO field was lost.
 
-- Task: Add the named Story campaign heroes and villains (Moonraker, Falcon, Dart, Hothead, Cosmonaut Comrade, Unic, SpeedRunner), the five mission types (Classic, Lap Race, Skyfall Rush, Boss Battle, Escape Missions), and the Five Movers Boss Battle mechanic.
-- Files changed: `src/data/pages/home.ts`, `src/data/pages/fixed-pages.ts` (`characters-abilities`, `tracks-game-modes`, new `story-campaign`, `wiki`, `faq`, `guides`), `src/data/faq.ts`, `src/data/navigation.ts`, `CONTENT_INDEX.md`.
-- URLs affected: `/`, `/characters`, `/tracks-modes`, new `/story-campaign`, `/wiki`, `/faq`, `/guides`.
-- SEO/GEO changed: New `/story-campaign` page lists the cast, mission types, and Boss Battle mechanic; `/characters` now carries a Story campaign roster table; `/tracks-modes` links out to the Story campaign page; primary navigation gains a Story campaign entry; FAQ schema covers Story characters, mission types, and Boss Battle.
-- Verification: `npm run verify` must succeed before pushing the target commit.
-
-### 2026-09-08 - Adsterra integration (speedrunners2kingofspeed-wiki launch)
-
-- Task: Replace empty placeholder values in `src/data/ads.ts` with real Adsterra Native Banner, Banner 728x90 / 468x60 / 320x50 / 160x600, and Smartlink codes produced by `adsterra-integrator`.
-- Files changed: `src/data/ads.ts`.
-- URLs affected: None — ad components and positions were predefined by the one-click builder; this entry only fills the existing ad slots.
-- SEO/GEO changed: No surface-level change; search and discoverability unchanged. Real ad codes are now wired into the existing Adsterra-ready modules.
-- Verification: `npm run verify` must succeed before pushing the target commit; adsterra-integrator validator reconciles registry, target `ads.ts`, private config/codes, and target domain.
-
-### 2026-08-12 - Static discovery and review freshness baseline added
-
-- Task: Add locale-aware static search, automatic recent updates, visible review dates, and browser metadata/security defaults to the shared template.
-- Files changed: Header/search components, content helpers, locale UI labels, homepage/page hero rendering, manifest/favicon metadata, Next.js security headers, and deterministic validators.
-- URLs affected: No existing URLs changed; search results use the final route manifest URLs and recent updates use existing indexable pages.
-- SEO/GEO changed: Last reviewed dates are public on every page; the homepage surfaces recent non-trust content by deterministic `lastReviewed` order; locale search never falls back across locales. Search indexes are emitted as per-locale force-static resources and lazy-loaded so full-site index data is not repeated in every page payload.
-- Browser baseline: Neutral SVG favicon, web manifest, `X-Content-Type-Options`, `Referrer-Policy`, and `X-Frame-Options` are wired without adding a restrictive CSP.
-- Verification: Typecheck, lint, template/content/SEO validation, and full verify are required before launch.
-
-### 2026-07-21 - V3 locale and entity routing added
-
-- Task: Upgrade the shared template for configuration-driven locale routes and programmatic entity pages.
-- Files changed: Site/page/entity types, locale and entity generators, dynamic routes, metadata, sitemap, validators, and template documentation.
-- URLs affected: Existing primary-locale URLs retain their paths; additional locale and entity routes are generated from configuration.
-- SEO changed: Canonical, hreflang, x-default, Open Graph locale, multilingual sitemap alternates, and final route-manifest validation are now data-driven.
-- Entity changed: Generic entity Hubs/details now render source links, relationships, and optional registered local images from one base fact package.
-- Verification: Typecheck, template validation, content validation, rendered SEO validation, route-manifest generation, and multilingual entity fixtures.
-
-### YYYY-MM-DD - Template baseline initialized
-
-- Task: Create the initial generated guide-site baseline.
-- Files changed: Template project files.
-- URLs affected: `/`, `/wiki`, `/guides`, `/release-date`, `/faq`, `/about`, `/contact`, `/privacy-policy`, `/terms`.
-- Content changed: Neutral placeholder content only.
-- Ad baseline: Fixed Adsterra-ready modules are present and disabled; no ad markup or request is emitted.
-- Follow-up: Replace this entry with a real launch/configuration entry when the one-click builder fills the site for a specific game.
